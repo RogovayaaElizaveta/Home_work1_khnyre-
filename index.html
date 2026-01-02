@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Місто Харків</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+        *{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    body {
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header, footer {
+            background-image:url('/img/lnz6wVQS0v67jfgUZLEoPWXcdNfDRiFXpl6hX4zl.jpeg');
+            padding: 20px;
+            text-align: center;
+            background-size: cover;
+            color: white;
+            font-size:large;
+        }
+        main {
+            padding: 20px;
+              background-color: #f2f2f2;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 100%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #999;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            background: linear-gradient(rgb(43, 234, 81), pink);
+           
+        }
+        .gallery img {
+            width: 30%;
+            margin: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+ 
+section {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #0057b7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003f8a;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Харків</h1>
+    <p>Місто студентів та науки</p>
+    <img src="https://advokat.org.ua/upload/000/u4/6/d/6d934efe.jpg" width="200">
+</header>
+
+<main>
+
+    <section>
+        <h2>Про місто</h2>
+        <p>
+            Харків — одне з найбільших міст України, потужний науковий,
+            освітній і культурний центр. Місто відоме своїми університетами,
+            архітектурою та зеленими зонами для відпочинку.
+        </p>
+    </section>
+
+    <section>
+        <h2>Цікаві місця</h2>
+        <ul>
+            <li>Площа Свободи</li>
+            <li>Парк Горького</li>
+            <li>Сад Шевченка</li>
+            <li>Харківський зоопарк</li>
+            <li>Екопарк Фельдмана</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Символи Харкова</h2>
+        <table>
+            <tr>
+                <th>Символ</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td>Площа Свободи</td>
+                <td>Одна з найбільших площ у Європі</td>
+            </tr>
+            <tr>
+                <td>ХНУРЕ</td>
+                <td>Відомий технічний університет</td>
+            </tr>
+            <tr>
+                <td>Держпром</td>
+                <td>Пам’ятка конструктивізму</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Галерея</h2>
+        <div class="gallery">
+            <img src="https://uamedtours.com.ua/storage/images/6827c1e80dcdb9be14c8dca249e1c95e.jpg">
+            <img src="https://forbes.ua/static/storage/thumbs/340x340/9/f6/255a331b-1309b3c11f223040f2f5c10c19f30f69.jpg?v=4466_1" width="180" height="296">
+            <img src="https://etnosvit.com/wp-content/uploads/Gorky-Central-Park-Kharkov.jpg">
+        </div>
+    </section>
+
+    <section>
+        <h2>Цікавий факт</h2>
+        <button onclick="showFact()">Показати факт</button>
+        <p id="fact"></p>
+    </section>
+
+    <section>
+        <h2>Відео про Харків</h2>
+        <iframe
+            width="300"
+            height="170"
+            src="https://www.youtube.com/embed/rfx8tB5El40"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+</main>
+
+<footer>
+    <p>Студентський проєкт Рогової Єлізавєти © 2026</p>
+</footer>
+<script>
+     function showFact() {
+        const facts = [
+            "Харків був першою столицею радянської України.",
+            "Площа Свободи — одна з найбільших у Європі.",
+            "У Харкові понад 40 вищих навчальних закладів.",
+            "Місто називають студентською столицею України."
+        ];
+        const randomFact = facts[Math.floor(Math.random() * facts.length)];
+        document.getElementById("fact").textContent = randomFact;
+    }
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
+
